@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Code Fusion</h1>
+        <nav>
+            <ul>
+                <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="#about"><i class="fas fa-user"></i> About</a></li>
+                <li><a href="#projects"><i class="fas fa-project-diagram"></i> Projects</a></li>
+                <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+            </ul>
+        </nav>
+        <button id="theme-toggle" aria-label="Toggle Theme">
+            <i class="fas fa-adjust"></i>
+        </button>
+    </header>
+    <main id="home">
+        <section id="home-details">
+            <h2>Welcome to Code Fusion</h2>
+            <p>Greetings! It's me, your guy Liam. HELLO WORLD.</p>
+            <h3>Discover My Work</h3>
+            <p>At Code Fusion, you will find a collection of my projects, blog posts, and more. Dive into the world of technology and explore the innovative solutions I have created.</p>
+            <p>Whether you are a fellow developer, a potential client, or just someone interested in technology, I hope you find the content here informative and inspiring.</p>
+        </section>
+        <section id="about">
+            <h2>About Code Fusion</h2>
+            <p>Code Fusion is a platform where I, Liam, showcase my projects and skills. Here, you will find various projects that I have worked on, ranging from web development to software engineering.</p>
+            <p>My journey in the tech world started with a passion for coding and problem-solving. Over the years, I have honed my skills in various programming languages and technologies, allowing me to create innovative solutions to complex problems.</p>
+            <p>At Code Fusion, I aim to share my knowledge and experiences with others, providing insights into the latest trends and best practices in the industry. Whether you are a fellow developer, a potential client, or just someone interested in technology, I hope you find the content here informative and inspiring.</p>
+            <p>Feel free to explore my projects, read my blog posts, and get in touch if you have any questions or collaboration ideas. Together, we can push the boundaries of what is possible with technology.</p>
+        </section>
+        <section id="projects">
+            <h2>Latest Projects</h2>
+            <ul>
+                <li><strong>Project 1:</strong> A web application for managing tasks.</li>
+                <li><strong>Project 2:</strong> A mobile app for tracking fitness activities.</li>
+                <li><strong>Project 3:</strong> A machine learning model for predicting stock prices.</li>
+            </ul>
+        </section>
+        <section id="contact">
+            <h2>Contact Information</h2>
+            <p>If you would like to get in touch, feel free to reach out via email or follow me on social media.</p>
+            <p><i class="fas fa-envelope"></i> bazumnoma254@gmail.com</p>
+            <p><i class="fas fa-phone"></i> +254746362415</p>
+            <p><i class="fab fa-facebook"></i> <a href="https://www.facebook.com/ni_bazu" target="_blank">Facebook Profile</a></p>
+        </section>
+        <section id="comments">
+            <h2>Leave a Comment</h2>
+            <form id="comment-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="comment">Comment:</label>
+                <textarea id="comment" name="comment" rows="4" required></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+        <section id="invite">
+            <h2>Invite Others</h2>
+            <p>Share this website with your friends and colleagues:</p>
+            <button id="copy-link">Copy Link</button>
+            <div class="social-share">
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https://yourwebsite.com" target="_blank"><i class="fab fa-facebook"></i> Share on Facebook</a>
+                <a href="https://twitter.com/intent/tweet?url=https://yourwebsite.com&text=Check%20out%20this%20awesome%20website!" target="_blank"><i class="fab fa-twitter"></i> Share on Twitter</a>
+                <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://yourwebsite.com&title=Check%20out%20this%20awesome%20website!" target="_blank"><i class="fab fa-linkedin"></i> Share on LinkedIn</a>
+            </div>
+        </section>
+        <section id="honeycomb">
+            <h2>User Experience Honeycomb</h2>
+            <div class="honeycomb">
+                <div class="hexagon"><span>Useful</span></div>
+                <div class="hexagon"><span>Usable</span></div>
+                <div class="hexagon"><span>Desirable</span></div>
+                <div class="hexagon"><span>Findable</span></div>
+                <div class="hexagon"><span>Accessible</span></div>
+                <div class="hexagon"><span>Credible</span></div>
+                <div class="hexagon"><span>Valuable</span></div>
+            </div>
+        </section>
+    </main>
+    <button id="back-to-top" aria-label="Back to Home">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    <script src="scripts/main.js"></script>
+</body>
+</html>
