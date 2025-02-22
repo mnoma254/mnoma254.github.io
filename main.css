@@ -1,0 +1,337 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    font-weight: bold; /* Make all text bold */
+    font-family: 'Arial', sans-serif; /* Default font for the body */
+}
+
+/* Default light theme */
+body {
+    background: url('C:/Users/bazum/Downloads/background.jpg') no-repeat center center fixed; /* Background image */
+    background-size: cover; /* Cover the entire background */
+    color: #000000; /* Dark text color */
+}
+
+body.light-theme {
+    background-color: #e6e6e6; /* Light background */
+    color: #000000; /* Dark text color */
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+header {
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+    color: #1eff00; /* Original green text color */
+    padding: 20px;
+    position: relative;
+    text-align: center;
+    font-family: 'Verdana', sans-serif; /* Font for the header */
+    font-weight: bold; /* Make all text bold */
+    text-transform: uppercase; /* Make all text capital letters */
+    animation: slideIn 1s ease-out; /* Apply the animation */
+}
+
+header nav {
+    margin-top: 10px;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+header nav ul li {
+    display: inline;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: inherit;
+    font-weight: bold; /* Make all text bold */
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: color 0.3s ease, text-decoration 0.3s ease; /* Smooth transition for color and text-decoration */
+}
+
+header nav ul li a:hover {
+    color: #00ffff; /* Change color on hover */
+    text-decoration: underline; /* Underline on hover */
+}
+
+header.light-theme {
+    background: #01d9ff; /* Original green background */
+    color: #000000; /* Original green text color */
+}
+
+h1 {
+    margin: 0;
+    font-family: 'Georgia', serif; /* Font for h1 */
+}
+
+nav {
+    margin: 20px 0;
+    font-family: 'Tahoma', sans-serif; /* Font for navigation */
+}
+
+nav a {
+    color: #000000; /* Dark text color for links */
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+nav a.light-theme {
+    color: #000000; /* Dark text color for links */
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding: 20px;
+    background: rgba(255, 255, 255, 0); /* Fully transparent background for main content */
+    font-weight: bold; /* Make all text bold */
+}
+
+main p {
+    background-color: transparent; /* Fully transparent background */
+    padding: 10px;
+    border-radius: 10px; /* Rounded corners */
+    display: inline-block; /* Make background fit just the text */
+    text-align: center; /* Align text in the middle */
+    font-family: 'Courier New', monospace; /* Font for main paragraph */
+}
+
+main p.light-theme {
+    background-color: transparent; /* Fully transparent background */
+    color: #00eeff; /* Dark text color */
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+section h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    font-weight: bold; /* Make all text bold */
+}
+
+section p, section ul {
+    font-size: 18px;
+    line-height: 1.6;
+    font-weight: bold; /* Make all text bold */
+}
+
+.contact p {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    margin: 10px 0;
+    font-weight: bold; /* Make all text bold */
+}
+
+.contact i {
+    margin-right: 10px;
+}
+
+.contact a {
+    color: inherit;
+    text-decoration: none;
+    font-weight: bold; /* Make all text bold */
+    transition: color 0.3s ease, text-decoration 0.3s ease; /* Smooth transition for color and text-decoration */
+}
+
+.contact a:hover {
+    color: #00ffff; /* Change color on hover */
+    text-decoration: underline; /* Underline on hover */
+}
+
+footer {
+    background: #76f500; /* Original green background for light theme */
+    color: #ffffff; /* Light text color */
+    text-align: center;
+    padding: 10px 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    font-family: 'Times New Roman', serif; /* Font for footer */
+}
+
+footer.light-theme {
+    background: #00e1ff; /* Original green background */
+    color: #000000; /* Light text color */
+}
+
+footer.dark-theme {
+    background: #1a1a1a; /* Darker background for footer */
+    color: #ffffff; /* Pure white text color */
+}
+
+footer .about, footer .contact {
+    margin-top: 10px;
+    font-size: 14px;
+    color: inherit; /* Inherit text color from footer */
+}
+
+#theme-toggle {
+    background: none;
+    border: none;
+    color: inherit;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-weight: bold; /* Make all text bold */
+}
+
+#theme-toggle:focus {
+    outline: none;
+}
+
+/* Dark theme */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #121212; /* Dark background */
+        color: #00eeff; /* Light text color */
+        font-weight: bold; /* Make all text bold */
+    }
+
+    body.dark-theme {
+        background-color: transparent; /* Fully transparent background */
+        color: #e0e0e0; /* Light text color */
+        font-weight: bold; /* Make all text bold */
+    }
+
+    header {
+        background: rgba(0, 0, 0, 0.7); /* Semi-transparent black background for header */
+        color: #00ffff; /* Light text color */
+        font-weight: bold; /* Make all text bold */
+        text-transform: uppercase; /* Make all text capital letters */
+        animation: slideIn 1s ease-out; /* Apply the animation */
+    }
+
+    header.dark-theme {
+        background: rgba(0, 0, 0, 0.7); /* Semi-transparent black background for header */
+        color: #00e1ff; /* Pure white text color */
+        font-weight: bold; /* Make all text bold */
+        text-transform: uppercase; /* Make all text capital letters */
+    }
+
+    nav a {
+        color: #5eff00; /* Light text color for links */
+    }
+
+    nav a.dark-theme {
+        color: #00ff0d; /* Pure white text color for links */
+    }
+
+    main p {
+        background-color: transparent; /* Fully transparent background for paragraph */
+        color: #fffb00; /* Light text color */
+    }
+
+    main p.dark-theme {
+        background-color: transparent; /* Fully transparent background for paragraph */
+        color: #d0ff00; /* Light text color */
+    }
+
+    footer {
+        background: transparent; /* Fully transparent background for footer */
+        color: #ffffff; /* Light text color */
+    }
+
+    footer.dark-theme {
+        background: transparent; /* Fully transparent background for footer */
+        color: #3cff00; /* Pure white text color */
+    }
+}
+
+#comment-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#comment-form label {
+    font-weight: bold;
+}
+
+#comment-form input, #comment-form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#comment-form button {
+    padding: 10px 20px;
+    background-color: #1eff00;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#comment-form button:hover {
+    background-color: #00cc00;
+}
+
+#invite {
+    text-align: center;
+}
+
+#invite button {
+    padding: 10px 20px;
+    background-color: #1eff00;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+#invite button:hover {
+    background-color: #00cc00;
+}
+
+.social-share {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+social-share a {
+    color: inherit;
+    text-decoration: none;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.social-share a:hover {
+    color: #00ffff;
+    text-decoration: underline;
+}
