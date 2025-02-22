@@ -5,18 +5,16 @@ html, body {
     flex-direction: column;
     font-weight: bold; /* Make all text bold */
     font-family: 'Arial', sans-serif; /* Default font for the body */
-}
-
-/* Default light theme */
-body {
-    background: url('C:/Users/bazum/Downloads/background.jpg') no-repeat center center fixed; /* Background image */
+    background-image: url("C:/Users/bazum/OneDrive/Pictures/background.jpg"); /* Path to your background image */
     background-size: cover; /* Cover the entire background */
-    color: #000000; /* Dark text color */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Do not repeat the background image */
+    background-attachment: fixed; /* Make the background image static */
 }
 
-body.light-theme {
-    background-color: #e6e6e6; /* Light background */
-    color: #000000; /* Dark text color */
+/* Default theme */
+body {
+    color: #2bff00; /* Light green text color */
 }
 
 @keyframes slideIn {
@@ -32,7 +30,7 @@ body.light-theme {
 
 header {
     background: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
-    color: #1eff00; /* Original green text color */
+    color: #01f7ff; /* Light green text color */
     padding: 20px;
     position: relative;
     text-align: center;
@@ -44,6 +42,45 @@ header {
 
 header nav {
     margin-top: 10px;
+}
+
+header nav.side-nav {
+    position: fixed;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+    padding: 10px;
+    border-radius: 0 10px 10px 0;
+}
+
+header nav.side-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+header nav.side-nav ul li {
+    display: block;
+}
+
+header nav.side-nav ul li a {
+    text-decoration: none;
+    color: inherit;
+    font-weight: bold; /* Make all text bold */
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 10px;
+    transition: color 0.3s ease, text-decoration 0.3s ease; /* Smooth transition for color and text-decoration */
+}
+
+header nav.side-nav ul li a:hover {
+    color: #ff69b4; /* Change color on hover to hot pink */
+    text-decoration: underline; /* Underline on hover */
 }
 
 header nav ul {
@@ -70,13 +107,8 @@ header nav ul li a {
 }
 
 header nav ul li a:hover {
-    color: #00ffff; /* Change color on hover */
+    color: #ff69b4; /* Change color on hover to hot pink */
     text-decoration: underline; /* Underline on hover */
-}
-
-header.light-theme {
-    background: #01d9ff; /* Original green background */
-    color: #000000; /* Original green text color */
 }
 
 h1 {
@@ -90,13 +122,9 @@ nav {
 }
 
 nav a {
-    color: #000000; /* Dark text color for links */
+    color: #90ee90; /* Light green text color for links */
     text-decoration: none;
     margin: 0 15px;
-}
-
-nav a.light-theme {
-    color: #000000; /* Dark text color for links */
 }
 
 nav a:hover {
@@ -116,11 +144,6 @@ main p {
     display: inline-block; /* Make background fit just the text */
     text-align: center; /* Align text in the middle */
     font-family: 'Courier New', monospace; /* Font for main paragraph */
-}
-
-main p.light-theme {
-    background-color: transparent; /* Fully transparent background */
-    color: #00eeff; /* Dark text color */
 }
 
 section {
@@ -163,9 +186,17 @@ section p, section ul {
     text-decoration: underline; /* Underline on hover */
 }
 
+.contact a.facebook-link {
+    color: #3b5998; /* Facebook blue color */
+}
+
+.contact a.facebook-link:hover {
+    color: #8b9dc3; /* Lighter Facebook blue on hover */
+}
+
 footer {
-    background: #76f500; /* Original green background for light theme */
-    color: #ffffff; /* Light text color */
+    background: #ffb6c1; /* Light pink background for footer */
+    color: #90ee90; /* Light green text color */
     text-align: center;
     padding: 10px 0;
     position: absolute;
@@ -174,102 +205,18 @@ footer {
     font-family: 'Times New Roman', serif; /* Font for footer */
 }
 
-footer.light-theme {
-    background: #00e1ff; /* Original green background */
-    color: #000000; /* Light text color */
-}
-
-footer.dark-theme {
-    background: #1a1a1a; /* Darker background for footer */
-    color: #ffffff; /* Pure white text color */
-}
-
 footer .about, footer .contact {
     margin-top: 10px;
     font-size: 14px;
     color: inherit; /* Inherit text color from footer */
 }
 
-#theme-toggle {
-    background: none;
-    border: none;
-    color: inherit;
-    font-size: 24px;
-    cursor: pointer;
-    padding: 0;
-    margin: 0;
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-weight: bold; /* Make all text bold */
-}
-
-#theme-toggle:focus {
-    outline: none;
-}
-
-/* Dark theme */
-@media (prefers-color-scheme: dark) {
-    body {
-        background-color: #121212; /* Dark background */
-        color: #00eeff; /* Light text color */
-        font-weight: bold; /* Make all text bold */
-    }
-
-    body.dark-theme {
-        background-color: transparent; /* Fully transparent background */
-        color: #e0e0e0; /* Light text color */
-        font-weight: bold; /* Make all text bold */
-    }
-
-    header {
-        background: rgba(0, 0, 0, 0.7); /* Semi-transparent black background for header */
-        color: #00ffff; /* Light text color */
-        font-weight: bold; /* Make all text bold */
-        text-transform: uppercase; /* Make all text capital letters */
-        animation: slideIn 1s ease-out; /* Apply the animation */
-    }
-
-    header.dark-theme {
-        background: rgba(0, 0, 0, 0.7); /* Semi-transparent black background for header */
-        color: #00e1ff; /* Pure white text color */
-        font-weight: bold; /* Make all text bold */
-        text-transform: uppercase; /* Make all text capital letters */
-    }
-
-    nav a {
-        color: #5eff00; /* Light text color for links */
-    }
-
-    nav a.dark-theme {
-        color: #00ff0d; /* Pure white text color for links */
-    }
-
-    main p {
-        background-color: transparent; /* Fully transparent background for paragraph */
-        color: #fffb00; /* Light text color */
-    }
-
-    main p.dark-theme {
-        background-color: transparent; /* Fully transparent background for paragraph */
-        color: #d0ff00; /* Light text color */
-    }
-
-    footer {
-        background: transparent; /* Fully transparent background for footer */
-        color: #ffffff; /* Light text color */
-    }
-
-    footer.dark-theme {
-        background: transparent; /* Fully transparent background for footer */
-        color: #3cff00; /* Pure white text color */
-    }
-}
-
 #comment-form {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    max-width: 300px; /* Reduce the maximum width */
+    margin: 0 auto;
 }
 
 #comment-form label {
@@ -277,16 +224,33 @@ footer .about, footer .contact {
 }
 
 #comment-form input, #comment-form textarea {
-    padding: 10px;
+    padding: 5px; /* Reduce padding */
     border: 1px solid #ccc;
     border-radius: 5px;
-    font-size: 16px;
+    font-size: 14px; /* Reduce font size */
+}
+
+#comment-form input[type="text"],
+#comment-form textarea {
+    width: 100%;
+    box-sizing: border-box;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #000;
+    padding: 5px 0; /* Reduce padding */
+    margin-bottom: 10px;
+}
+
+#comment-form input[type="text"]:focus,
+#comment-form textarea:focus {
+    outline: none;
+    border-bottom: 2px solid #000;
 }
 
 #comment-form button {
-    padding: 10px 20px;
-    background-color: #1eff00;
-    color: #000;
+    padding: 5px 10px; /* Reduce padding */
+    background-color: #ff69b4; /* Hot pink background */
+    color: #fff; /* White text color */
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -294,7 +258,7 @@ footer .about, footer .contact {
 }
 
 #comment-form button:hover {
-    background-color: #00cc00;
+    background-color: #ff1493; /* Deep pink background on hover */
 }
 
 #invite {
@@ -303,8 +267,8 @@ footer .about, footer .contact {
 
 #invite button {
     padding: 10px 20px;
-    background-color: #1eff00;
-    color: #000;
+    background-color: #ff69b4; /* Hot pink background */
+    color: #fff; /* White text color */
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -313,25 +277,110 @@ footer .about, footer .contact {
 }
 
 #invite button:hover {
-    background-color: #00cc00;
+    background-color: #ff1493; /* Deep pink background on hover */
 }
 
-.social-share {
+#invite h2 {
+    text-align: center;
+    text-transform: uppercase;
+    color: #00d9ff; /* Light blue color */
+}
+
+social-share {
     display: flex;
     justify-content: center;
     gap: 20px;
 }
 
 social-share a {
-    color: inherit;
+    color: #ffaa00; /* Orange color */
     text-decoration: none;
     font-weight: bold;
     display: flex;
     align-items: center;
     gap: 5px;
+    transition: color 0.3s ease, text-decoration 0.3s ease; /* Smooth transition for color and text-decoration */
 }
 
-.social-share a:hover {
-    color: #00ffff;
+social-share a:hover {
+    color: #ff69b4; /* Hot pink color on hover */
     text-decoration: underline;
+}
+
+social-share a.facebook-link {
+    color: #90ee90; /* Light green color */
+}
+
+social-share a.facebook-link:hover {
+    color: #8b9dc3; /* Lighter Facebook blue on hover */
+}
+
+social-share a.twitter-link {
+    color: #90ee90; /* Light green color */
+}
+
+social-share a.twitter-link:hover {
+    color: #8b9dc3; /* Lighter Facebook blue on hover */
+}
+
+social-share a.linkedin-link {
+    color: #00d9ff; /* Light blue color */
+}
+
+social-share a.linkedin-link:hover {
+    color: #ff69b4; /* Hot pink color on hover */
+}
+
+#projects h2 {
+    text-align: center;
+    text-transform: uppercase;
+    color: #00d9ff; /* Warm blue color */
+}
+
+#contact h2 {
+    text-align: center;
+    text-transform: uppercase;
+    color: #00d9ff; /* Light blue color */
+}
+
+#home-details h3 {
+    text-align: center;
+    text-transform: uppercase;
+    color: #00d9ff; /* Light blue color */
+}
+
+#home-details h2 {
+    text-align: center;
+    text-transform: uppercase;
+    color: #00d9ff; /* Light blue color */
+}
+
+#home-details p {
+    text-align: left;
+}
+
+#about {
+    text-align: left;
+}
+
+#about h2 {
+    text-align: center;
+    text-transform: uppercase;
+    color: #00fff2; /* Light blue color */
+}
+
+#about p {
+    text-align: left;
+}
+
+#comments h2 {
+    text-align: center;
+    text-transform: uppercase;
+    color: #ffee00; /* Orange color */
+}
+
+#share h2 {
+    text-align: center;
+    text-transform: uppercase;
+    color: #ffaa00; /* Orange color */
 }
